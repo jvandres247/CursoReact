@@ -10,17 +10,17 @@ const getHeroeById = (id) => {
     });
 }
 
-console.log(getHeroeById(2));
+//console.log(getHeroeById(2));
 
-const getHeroeById2 = (id) => {
+export const getHeroeById2 = (id) => {
     return heroes.find((heroe) => heroe.id === id);
 }
 
-console.log(getHeroeById2(1));
+//console.log(getHeroeById2(1));
 
 const getHeroeByOwner = (owner) =>
 {
     return heroes.filter(heroe => heroe.owner === owner);
 }
 
-console.log(getHeroeByOwner('DC'));
+//console.log(getHeroeByOwner('DC'));
