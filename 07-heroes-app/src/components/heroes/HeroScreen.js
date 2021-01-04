@@ -24,7 +24,7 @@ export const HeroScreen = ({history}) => {
     alter_ego,
     first_appearance,
     characters,
-  } = hero;
+  } = hero[0];
 
   return (
     <div className="row mt-5">
