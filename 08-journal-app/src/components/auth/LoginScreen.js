@@ -2,7 +2,7 @@ import React from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import { Link } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
-import { login, startGoogleLogin, startLoginEmailPassword } from "../../redux/actions/auth";
+import { startGoogleLogin, startLoginEmailPassword } from "../../redux/actions/auth";
 
 export const LoginScreen = () => {
 
@@ -18,7 +18,6 @@ export const LoginScreen = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    //dispatch(login(12345, 'Andres'))
     dispatch(startLoginEmailPassword(email, password))
   }
 
@@ -29,7 +28,7 @@ export const LoginScreen = () => {
   return (
     <>
       <h3>Login</h3>
-      <form onSubmit={handleLogin}> 
+      <form onSubmit={handleLogin} className='animate__animated animate__fadeIn animate__faster'> 
         <input
           type="text"
           placeholder="Correo Electronico"
